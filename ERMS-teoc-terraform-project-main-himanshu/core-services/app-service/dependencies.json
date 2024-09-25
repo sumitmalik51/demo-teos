@@ -1,0 +1,9 @@
+{
+    "dependencies": {
+        "paths": [
+            "./core-services/app-insights",
+            "./core-services/app-service-plan",
+            "./core-services/resource-group"
+        ]
+    }
+}

@@ -1,0 +1,59 @@
+resourceGroup = [
+  {
+    Name     = "rg-teoc-dev-uksouth-01"
+    Location = "uk-south"
+  }
+]
+
+servicePlan = [
+  {
+    Name          = "asp-teoc-dev-uksouth-01"
+    Location      = resourceGroup.location
+    ResourceGroup = resourceGroup.name
+    OsType        = "windows"
+    SKU           = "S1"
+  }
+]
+
+appService = [
+  {
+    Name          = "teocdev"
+    Location      = resourceGroup.location
+    ResourceGroup = resourceGroup.name
+    CurrentStack  = "dotnet"
+    DotNetVersion = "v6.0"
+    HttpsOnly     = true
+  }
+]
+
+appInsights = [
+  {
+    Name            = "appi-teoc-dev-uksouth-01"
+    Location        = resourceGroup.location
+    ResourceGroup   = resourceGroup.name
+    ApplicationType = "web"
+  }
+]
+
+logAnalytics = [
+  {
+    Name          = "law-teoc-dev-uksouth-01"
+    Location      = resourceGroup.location
+    ResourceGroup = resourceGroup.name
+    SKU           = "PerGB2018"
+    Retention     = 30
+  }
+]
+
+keyVault = [
+  {
+    Name                   = "kv-teoc-dev-uksouth-01"
+    Location               = resourceGroup.location
+    ResourceGroup          = resourceGroup.name
+    DiskEncryptionEnabled  = true
+    Tenant                 = "ee4e1499-4a35-4b2e-ad47-5f3cf9de8666"
+    SoftDeleteRetention    = 7
+    PurgeProtectionEnabled = true
+    SKU                    = "standard"
+  }
+]
