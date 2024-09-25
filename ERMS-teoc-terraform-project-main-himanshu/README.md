@@ -19,9 +19,8 @@ This repository contains the Terraform configurations to deploy the `TEOC` servi
 - `terraform.tf`: Terraform version configuration. This file is copied during the Github Actions workflow to each directory where it is needed.
 
 ## Core Services
-  1. Azure Kubernetes Service (AKS)
-      - Manages containerized applications across multiple virtual machines.
-      - Provides automated scaling, updates, and monitoring for Kubernetes clusters.
+  1. App Service
+      - Manages the TEOC application source code.
   2. Azure Virtual Network (VNet)
       - Establishes a secure private network in Azure, allowing resources to communicate securely.
       - Provides subnets, NSGs, and peering options.
