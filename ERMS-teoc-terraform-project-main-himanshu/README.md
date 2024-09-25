@@ -16,8 +16,23 @@ This repository contains the Terraform configurations to deploy the `TEOC` servi
   - `dev.tfvars`: Terraform variables for the development environment.
 - `global.tfvars`: Global Terraform variables.
 - `providers.tf`: Terraform provider configurations. This file is copied during the Github Actions workflow to each directory where it is needed. CLI flags are then passed in to use the correct backend.
-- `terraform.tf`: Terraform version configuration. This file is copied during the Github Actions workflow to each directory where it is needed. 
+- `terraform.tf`: Terraform version configuration. This file is copied during the Github Actions workflow to each directory where it is needed.
 
+## Core Services
+  1. Azure Kubernetes Service (AKS)
+      Manages containerized applications across multiple virtual machines.
+      Provides automated scaling, updates, and monitoring for Kubernetes clusters.
+  2. Azure Virtual Network (VNet)
+      Establishes a secure private network in Azure, allowing resources to communicate securely.
+      Provides subnets, NSGs, and peering options.
+  3. Azure Key Vault
+      Secures secrets, certificates, and keys used by applications.
+      Integrated with AKS for securing application credentials.
+  4. Azure Monitor & Log Analytics
+      Monitors resource health, collects logs and metrics, and integrates alerts for resource tracking.
+  5. Azure Load Balancer
+      Distributes incoming network traffic across multiple VMs for high availability.
+  
 ## Terraform Stacks
 
 Each directory in the `core-services` folders has its own Terraform state file. Each directory is called a 'stack'. This isolation allows for modular and independent management of each component of the infrastructure, facilitating easier updates and rollbacks.
