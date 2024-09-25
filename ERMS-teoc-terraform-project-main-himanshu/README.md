@@ -20,18 +20,18 @@ This repository contains the Terraform configurations to deploy the `TEOC` servi
 
 ## Core Services
   1. Azure Kubernetes Service (AKS)
-      Manages containerized applications across multiple virtual machines.
-      Provides automated scaling, updates, and monitoring for Kubernetes clusters.
+      - Manages containerized applications across multiple virtual machines.
+      - Provides automated scaling, updates, and monitoring for Kubernetes clusters.
   2. Azure Virtual Network (VNet)
-      Establishes a secure private network in Azure, allowing resources to communicate securely.
-      Provides subnets, NSGs, and peering options.
+      - Establishes a secure private network in Azure, allowing resources to communicate securely.
+      - Provides subnets, NSGs, and peering options.
   3. Azure Key Vault
-      Secures secrets, certificates, and keys used by applications.
-      Integrated with AKS for securing application credentials.
+      - Secures secrets, certificates, and keys used by applications.
+      - Integrated with AKS for securing application credentials.
   4. Azure Monitor & Log Analytics
-      Monitors resource health, collects logs and metrics, and integrates alerts for resource tracking.
+      - Monitors resource health, collects logs and metrics, and integrates alerts for resource tracking.
   5. Azure Load Balancer
-      Distributes incoming network traffic across multiple VMs for high availability.
+      - Distributes incoming network traffic across multiple VMs for high availability.
   
 ## Terraform Stacks
 
