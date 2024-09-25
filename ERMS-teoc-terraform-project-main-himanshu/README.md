@@ -1,6 +1,6 @@
-# Hello World Service Infrastructure
+# TEOC Infrastructure
 
-This repository contains the Terraform configurations to deploy the `hello-world` service, consisting of two applications: [hello-world-frontend](https://github.com/ntsedemoorg/hello-world-front) and [hello-world-api](https://github.com/ntsedemoorg/hello-world-api). This Terraform repo sets up the necessary Azure infrastructure to run the applications.
+This repository contains the Terraform configurations to deploy the `TEOC` service, consisting of two applications: [hello-world-frontend](https://github.com/ntsedemoorg/hello-world-front) and [hello-world-api](https://github.com/ntsedemoorg/hello-world-api). This Terraform repo sets up the necessary Azure infrastructure to run the applications.
 
 ## Project Structure
 
@@ -16,7 +16,6 @@ This repository contains the Terraform configurations to deploy the `hello-world
   - `resource-group/`: Terraform configuration for setting up the resource-group.
 - `environment/`
   - `dev.tfvars`: Terraform variables for the development environment.
-  - `prod.tfvars`: Terraform variables for the production environment.
 - `global.tfvars`: Global Terraform variables.
 - `providers.tf`: Terraform provider configurations. This file is copied during the Github Actions workflow to each directory where it is needed. CLI flags are then passed in to use the correct backend.
 - `terraform.tf`: Terraform version configuration. This file is copied during the Github Actions workflow to each directory where it is needed. 
