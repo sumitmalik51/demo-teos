@@ -1,12 +1,9 @@
 # TEOC Infrastructure
 
-This repository contains the Terraform configurations to deploy the `TEOC` service, consisting of two applications: [hello-world-frontend](https://github.com/ntsedemoorg/hello-world-front) and [hello-world-api](https://github.com/ntsedemoorg/hello-world-api). This Terraform repo sets up the necessary Azure infrastructure to run the applications.
+This repository contains the Terraform configurations to deploy the `TEOC` service. This Terraform repo sets up the necessary Azure infrastructure to run the applications.
 
 ## Project Structure
 
-- `applications/`
-  - `hello-world-frontend/`: Terraform configuration for deploying the frontend application.
-  - `hello-world-api/`: Terraform configuration for deploying the backend API.
 - `core-services/`
   - `app-insights/`: Terraform configuration for setting up the app-insight.
   - `app-service-plan/`: Terraform configuration for setting up the app-service-plan.
@@ -14,6 +11,7 @@ This repository contains the Terraform configurations to deploy the `TEOC` servi
   - `keyvault/`: Terraform configuration for setting up the keyvault.
   - `log-analytics/`: Terraform configuration for setting up the log-analytics.
   - `resource-group/`: Terraform configuration for setting up the resource-group.
+  -  `logic-app/`: Terraform configuration for setting up the logic app for monitoring pupose.
 - `environment/`
   - `dev.tfvars`: Terraform variables for the development environment.
 - `global.tfvars`: Global Terraform variables.
@@ -22,9 +20,9 @@ This repository contains the Terraform configurations to deploy the `TEOC` servi
 
 ## Terraform Stacks
 
-Each directory in the `core-services` and `applications` folders has its own Terraform state file. Each directory is called a 'stack'. This isolation allows for modular and independent management of each component of the infrastructure, facilitating easier updates and rollbacks.
+Each directory in the `core-services` folders has its own Terraform state file. Each directory is called a 'stack'. This isolation allows for modular and independent management of each component of the infrastructure, facilitating easier updates and rollbacks.
 
-With an Azure backend, the state file for each stack is stored in at the key `<environment name>/<directory name>/state.tfstate` in the state bucket. For example, the state file for the `hello-world-api` stack in the `development` environment would be `development/hello-world-api/state.tfstate`.
+With an Azure backend, the state file for each stack is stored in at the key `<environment name>/<directory name>/state.tfstate` in the state bucket. 
 
 ## Order of Terraform Apply / `dependencies.json`
 
@@ -61,8 +59,8 @@ The dependencies.json **MUST** validate against the schema below. If there are n
 {
     "dependencies": {
         "paths": [
-            "./core-services/ecs",
-            "./core-services/memcached"
+            "./core-services/app-service",
+            "./core-services/resource-group"
         ]
     }
 }
