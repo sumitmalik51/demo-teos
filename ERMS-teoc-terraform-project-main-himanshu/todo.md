@@ -36,3 +36,68 @@ You can also filter the email notifications you receive for pushes. For more inf
 4. In the "Address" field, enter up to two email addresses, separated by whitespace, where you'd like to receive notifications. If you need to send emails to more than two addresses, use a group email address.
 5. Click **Set up notifications** to complete the process.
 
+### Setup Alerts and Dashboard for Azure Login Apps for Monitoring
+
+
+## To Setup the Dashboard, you can take sample from the below code: 
+
+```
+resource "azurerm_dashboard" "example" {
+  name                = "example-dashboard"
+  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.example.location
+
+  tags = {
+    environment = "Production"
+  }
+
+  properties = jsonencode({
+    lenses = [
+      {
+        order    = 0
+        parts    = [
+          {
+            position = {
+              x = 0
+              y = 0
+              colSpan = 3
+              rowSpan = 4
+            }
+            metadata = {
+              inputs = []
+              type   = "Extension/MarkdownPart"
+              settings = {
+                content = "## Azure Logic App Monitoring Dashboard"
+              }
+            }
+          },
+          {
+            position = {
+              x = 3
+              y = 0
+              colSpan = 9
+              rowSpan = 6
+            }
+            metadata = {
+              inputs = []
+              type   = "Extension/ActivityLogAnalyticsPart"
+              settings = {
+                query = "AzureDiagnostics | where ResourceType == 'WORKFLOWS' and OperationName == 'Microsoft.Logic/workflows/workflow/run/action' | summarize count() by ActivityStatus"
+              }
+            }
+          }
+        ]
+      }
+    ]
+    metadata = {
+      model = {
+        timeRange = {
+          value = "24h"
+          type  = "Relative"
+        }
+        metadataVersion = "1"
+      }
+    }
+  })
+}
+```
