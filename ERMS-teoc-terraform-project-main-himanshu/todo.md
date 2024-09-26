@@ -36,10 +36,10 @@ You can also filter the email notifications you receive for pushes. For more inf
 4. In the "Address" field, enter up to two email addresses, separated by whitespace, where you'd like to receive notifications. If you need to send emails to more than two addresses, use a group email address.
 5. Click **Set up notifications** to complete the process.
 
-### Setup Alerts and Dashboard for Azure Login Apps for Monitoring
+## Setup Alerts and Dashboard for Azure Login Apps for Monitoring
 
 
-# To Setup the Dashboard, you can take sample from the below code: 
+#### To Setup the Dashboard, you can take sample from the below code: 
 
 ```
 resource "azurerm_dashboard" "example" {
