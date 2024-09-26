@@ -39,7 +39,7 @@ You can also filter the email notifications you receive for pushes. For more inf
 ### Setup Alerts and Dashboard for Azure Login Apps for Monitoring
 
 
-## To Setup the Dashboard, you can take sample from the below code: 
+# To Setup the Dashboard, you can take sample from the below code: 
 
 ```
 resource "azurerm_dashboard" "example" {
