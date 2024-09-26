@@ -1,39 +1,38 @@
-## TO-DO list items
-The below tasks are pending and needs to be compelted in TEOC github repositry. 
+---
 
-## Get alerts for pushed in Git Repo.
+## TO-DO List Items
 
-  To Setup the Alerts on Github Repositry you can follow the steps mentioned below:
+The following tasks are pending and need to be completed in the TEOC GitHub repository:
 
-  You can choose to automatically send email notifications to a specific email address when anyone pushes to the repository.
+### Get Alerts for Pushes in the GitHub Repository
 
-  ### Who can use this feature?
-    People with admin permissions in a repository can enable email notifications for pushes to your repository.
+To set up alerts for any new pushes to the GitHub repository, follow the steps outlined below:
 
-  ### Enabling email notifications for pushes to your repository
+You can configure automatic email notifications to be sent to a specific email address whenever anyone pushes to the repository.
 
-      Each email notification for a push to a repository lists the new commits and links to a diff containing just those commits. In the email notification you'll see:
+#### Who Can Use This Feature?
 
-       - The name of the repository where the commit was made
-       - The branch a commit was made in
-       - The SHA1 of the commit, including a link to the diff in GitHub
-       - The author of the commit
-       - The date when the commit was made
-       - The files that were changed as part of the commit
-       - The commit message
-       - You can filter email notifications you receive for pushes to a repository. For more information, see "Configuring notifications."
+This feature is available to users with admin permissions on the repository.
 
-  1. Enabling email notifications for pushes to your repository
-  2. On GitHub, navigate to the main page of the repository.
+#### Enabling Email Notifications for Pushes to Your Repository
 
-  3. Under your repository name, click  Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
+Each email notification for a push will include a summary of the new commits and links to a diff containing those commits. The email notification will provide:
 
-  4. The "Settings" tab is highlighted by a dark orange outline.
-  5. In the "Integrations" section of the sidebar, click  Email notifications.
-  6. In the "Address" field, type up to two email addresses, separated by whitespace, where you'd like notifications to be sent. If you'd like to send emails to more than two accounts, set one of the email addresses to a group email address.
-  7. Click Setup notifications.
+- The name of the repository where the commit was made
+- The branch in which the commit was made
+- The SHA1 of the commit, including a link to the diff on GitHub
+- The author of the commit
+- The date when the commit was made
+- The files that were changed as part of the commit
+- The commit message
 
-     
-## Setup Alerts and dashboard in Logic Apps.
+You can also filter the email notifications you receive for pushes. For more information, see "Configuring notifications."
 
+#### Steps to Enable Email Notifications for Pushes
+
+1. Go to the main page of the repository on GitHub.
+2. Under your repository name, click **Settings**. If the "Settings" tab is not visible, select the dropdown menu and then click **Settings**.
+3. In the sidebar, under the "Integrations" section, click **Email notifications**.
+4. In the "Address" field, enter up to two email addresses, separated by whitespace, where you'd like to receive notifications. If you need to send emails to more than two addresses, use a group email address.
+5. Click **Set up notifications** to complete the process.
 
