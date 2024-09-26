@@ -1,4 +1,5 @@
 ## TO-DO list items
+The below tasks are pending and needs to be compelted in TEOC github repositry. 
 
 ## Get alerts for pushed in Git Repo.
 
