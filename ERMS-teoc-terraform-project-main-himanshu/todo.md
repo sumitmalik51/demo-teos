@@ -38,6 +38,11 @@ You can also filter the email notifications you receive for pushes. For more inf
 
 ## Setup Alerts and Dashboard for Azure Login Apps for Monitoring
 
+The Azure Logic Apps already gets deployed with the existing version of infrastructre and you will just need to enable to Alerts and workflows.
+
+####
+
+Setting up the alerts and workflow with Azure Logic apps can be found here: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/logic_app_workflow
 
 #### To Setup the Dashboard, you can take sample from the below code: 
 
