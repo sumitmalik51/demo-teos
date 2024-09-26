@@ -1,5 +1,3 @@
----
-
 ## TO-DO List Items
 
 The following tasks are pending and need to be completed in the TEOC GitHub repository:
@@ -28,6 +26,8 @@ Each email notification for a push will include a summary of the new commits and
 
 You can also filter the email notifications you receive for pushes. For more information, see "Configuring notifications."
 
+-----
+
 #### Steps to Enable Email Notifications for Pushes
 
 1. Go to the main page of the repository on GitHub.
@@ -43,6 +43,7 @@ The Azure Logic Apps already gets deployed with the existing version of infrastr
 ####
 
 Setting up the alerts and workflow with Azure Logic apps can be found here: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/logic_app_workflow
+Learn more: https://learn.microsoft.com/en-us/azure/logic-apps/monitor-workflows-collect-diagnostic-data?tabs=consumption
 
 #### To Setup the Dashboard, you can take sample from the below code: 
 
