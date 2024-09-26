@@ -1,6 +1,6 @@
-TO-DO list items
+## TO-DO list items
 
-1. Get alerts for pushed in Git Repo.
+## Get alerts for pushed in Git Repo.
 
   To Setup the Alerts on Github Repositry you can follow the steps mentioned below:
 
